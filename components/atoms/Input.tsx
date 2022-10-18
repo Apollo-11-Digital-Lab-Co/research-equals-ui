@@ -41,7 +41,7 @@ export default function Input({
         value={value}
         onChange={onChange}
         className={cx(
-          "border-none bg-transparent py-[6px] px-3 outline-none w-full inline-block text-indigo-400",
+          "border-none bg-transparent py-[6px] px-3 outline-none w-full inline-block text-indigo-700",
           // dark mode
           "dark:text-white",
           inputProps?.className

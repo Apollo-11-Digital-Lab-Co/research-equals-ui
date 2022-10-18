@@ -42,7 +42,7 @@ export default function Header(props: HTMLAttributes<HTMLElement>) {
         </nav>
         {/* mobile nav */}
         <IconButton
-          className="md:hidden text-indigo-600 dark:text-indigo-300 relative"
+          className="relative md:hidden text-indigo-600 dark:text-indigo-300"
           icon={
             <>
               <span
