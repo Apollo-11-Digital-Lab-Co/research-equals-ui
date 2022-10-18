@@ -1,4 +1,5 @@
 import cx from "classnames";
+import { forwardRef } from "react";
 import type { ButtonBaseProps } from "../atoms/ButtonBase";
 import ButtonBase from "../atoms/ButtonBase";
 import type { MaterialIconProps } from "../atoms/MaterialIcon";
@@ -9,14 +10,13 @@ export type IconButtonProps = {
   iconProps?: Omit<MaterialIconProps, "icon">;
 } & ButtonBaseProps;
 
-export default function IconButton({
-  icon,
-  iconProps,
-  ...props
-}: IconButtonProps) {
+export default forwardRef(function IconButton(
+  { icon, iconProps, ...props }: IconButtonProps,
+  ref
+) {
   return (
     <ButtonBase {...props} className={cx("p-3 rounded-lg", props?.className)}>
       <MaterialIcon icon={icon} {...iconProps} />
     </ButtonBase>
   );
-}
+});

@@ -1,4 +1,5 @@
 import cx from "classnames";
+import { forwardRef } from "react";
 import type { ButtonBaseProps } from "./ButtonBase";
 import ButtonBase from "./ButtonBase";
 
@@ -7,13 +8,16 @@ export type ButtonProps = {
   color?: "inherit" | "primary";
 } & ButtonBaseProps;
 
-export default function Button({
-  variant = "standard",
-  color = "inherit",
-  children,
-  href,
-  ...props
-}: ButtonProps) {
+export default forwardRef(function Button(
+  {
+    variant = "standard",
+    color = "inherit",
+    children,
+    href,
+    ...props
+  }: ButtonProps,
+  ref
+) {
   return (
     <ButtonBase
       {...props}
@@ -40,4 +44,4 @@ export default function Button({
       {children}
     </ButtonBase>
   );
-}
+});

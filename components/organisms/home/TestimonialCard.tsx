@@ -30,7 +30,7 @@ export default function TestimonialCard({
         </div>
       )}
       <p className="text-base md:text-lg">“{message}”</p>
-      <div className="space-y-2 text-base">
+      <div>
         <div className="font-bold">{name}</div>
         {position && <div>{position}</div>}
       </div>

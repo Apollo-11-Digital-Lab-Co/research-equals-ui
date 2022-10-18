@@ -17,6 +17,7 @@ const APPROACH_DATA: {
   caption: string;
   title: string;
   image: string;
+  imageDark?: string;
 }[] = [
   {
     icon: "close",
@@ -24,6 +25,7 @@ const APPROACH_DATA: {
     caption: "THE OLD WAY OF DOING RESEARCH",
     title: "The hard work you put in research is invisible and undocumented",
     image: "/images/home/old-way.svg",
+    imageDark: "/images/home/old-way-dark.svg",
   },
   {
     icon: "done",
@@ -31,6 +33,7 @@ const APPROACH_DATA: {
     caption: "THE RESEARCHEQUALS PROCESS",
     title: "Get a clear picture of your research journey from start to finish",
     image: "/images/home/new-way.svg",
+    imageDark: "/images/home/new-way-dark.svg",
   },
 ];
 
@@ -61,6 +64,7 @@ const STEPS_DATA: {
       "Connect modules as you go along. You can link and fork paths as you decide the next step of the process.",
     image: {
       src: "/images/home/add-link.svg",
+      srcDark: "/images/home/add-link-dark.svg",
       width: 800,
       height: 447,
     },

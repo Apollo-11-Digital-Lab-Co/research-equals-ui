@@ -39,7 +39,7 @@ export default function StepsContainer({
           {description}
         </p>
       </div>
-      <div className={cx("w-full md:w-[50%]", { "dark:hidden": srcDark })}>
+      <div className={cx("w-full md:w-[600px]", { "dark:hidden": srcDark })}>
         <Image
           src={src}
           alt={title}
@@ -49,7 +49,7 @@ export default function StepsContainer({
         />
       </div>
       {srcDark && (
-        <div className="w-full md:w-[50%] hidden dark:block">
+        <div className="w-full md:w-[600px] hidden dark:block">
           <Image
             src={srcDark}
             alt={title}

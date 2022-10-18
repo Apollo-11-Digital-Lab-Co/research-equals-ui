@@ -10,11 +10,12 @@ export type ApproachBoxProps = {
     caption: string;
     title: string;
     image: string;
+    imageDark?: string;
   };
 } & HTMLAttributes<HTMLDivElement>;
 
 export default function ApproachBox({
-  data: { icon, color, caption, title, image },
+  data: { icon, color, caption, title, image, imageDark },
   ...props
 }: ApproachBoxProps) {
   return (
@@ -57,7 +58,26 @@ export default function ApproachBox({
       <h3 className="my-2 md:mt-6 md:mb-10 text-2xl font-bold max-w-md">
         {title}
       </h3>
-      <Image src={image} alt="title" width={500} height={390} />
+      <div className={cx({ "dark:hidden": imageDark })}>
+        <Image
+          src={image}
+          alt="title"
+          width={500}
+          height={390}
+          layout="intrinsic"
+        />
+      </div>
+      {imageDark && (
+        <div className="hidden dark:block">
+          <Image
+            src={imageDark}
+            alt="title"
+            width={500}
+            height={390}
+            layout="intrinsic"
+          />
+        </div>
+      )}
     </div>
   );
 }
