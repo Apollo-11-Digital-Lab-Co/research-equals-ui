@@ -54,8 +54,8 @@ const STEPS_DATA: {
     image: {
       src: "/images/home/create-module.png",
       srcDark: "/images/home/create-module-dark.png",
-      width: 750,
-      height: 751,
+      width: 1200,
+      height: 1200,
     },
   },
   {
@@ -76,8 +76,8 @@ const STEPS_DATA: {
     image: {
       src: "/images/home/collaborate.png",
       srcDark: "/images/home/collaborate-dark.png",
-      width: 800,
-      height: 610,
+      width: 1248,
+      height: 918,
     },
   },
 ];
@@ -180,8 +180,8 @@ const Home: NextPage = () => {
             src="/images/home/hero.png"
             alt="Resource Equals"
             layout="responsive"
-            width={1280}
-            height={881}
+            width={2560}
+            height={1880}
           />
         </Container>
       </section>
@@ -350,8 +350,8 @@ const Home: NextPage = () => {
               <Image
                 src="/images/home/collections.png"
                 alt="Collections"
-                width={611}
-                height={538}
+                width={1148}
+                height={1021}
                 layout="intrinsic"
               />
             </div>
